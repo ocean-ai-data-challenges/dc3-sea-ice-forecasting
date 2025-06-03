@@ -44,9 +44,8 @@ mypy = "*"
 
 [tool.poetry.group.custom.dependencies]
 oceanbench = {git = "ssh://git@github.com/Articoking/oceanbench", branch = "main"}
-xrpatcher = {git = "ssh://git@github.com:jejjohnson/xrpatcher.git", branch = "main"}
+xrpatcher = {git = "ssh://git@github.com/jejjohnson/xrpatcher", branch = "main"}
 xesmf = {git = "git+https://github.com/pangeo-data/xESMF.git"}
-#dctools = { path = "/home/k24aitmo/IMT/software/dc-tools", develop = true }
 dctools = { git = "ssh://git@github.com/ppr-ocean-ia/dc-tools.git", branch = "main"}
 
 [tool.poetry.group.docs]
@@ -61,10 +60,7 @@ pygments = "^2.19.1"
 [build-system]
 requires = ["poetry-core>=1.0.0", "cython", "setuptools", "toml"]
 build-backend = "poetry.core.masonry.api"
-#[build-system]
-#requires = ["poetry-core", "cmake", "wheel", "setupttools"]
 
-#build-backend = "poetry.core.masonry.api"
 [tool.ruff]
 line-length = 100
 indent-width = 4
