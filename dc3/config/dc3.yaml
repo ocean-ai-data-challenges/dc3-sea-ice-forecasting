@@ -1,7 +1,11 @@
 ################################################################
 # This file lists variables used in configuring dc3 evaluation 
 ################################################################
+##  WASABI credentials
+define: &WASABI_KEY 
+define: &WASABI_SECRET_KEY 
 
+max_samples: 1
 #############
 ## List of start dates
 
@@ -13,6 +17,19 @@ end_times:
   - "2023-05-01"
   - "2024-05-01"
 
+# Target region coordinates (in meters)
+# NOTE: Coordinates in EPSG:3413 (Arctic) grid
+#       x range from -3 850 000 to 3 750 000
+#       y range from -5 350 000 to 5 850 000
+
+min_x: -3850000
+max_x: 3750000
+min_y: -5350000
+max_y: 5850000
+
+# Datasets
+batch_size: 8
+
 sources:
   - dataset: amsr2
     config: "s3"
@@ -20,8 +37,8 @@ sources:
     url: "https://s3.eu-west-2.wasabisys.com"
     s3_bucket: "ppr-ocean-climat"
     s3_folder: "DC3/AMSR2"
-    s3_key: *WASABI_KEY # TODO: Define this
-    s3_secret_key: *WASABI_SECRET_KEY # TODO: Define this
+    s3_key: *WASABI_KEY
+    s3_secret_key: *WASABI_SECRET_KEY
     file_pattern: "**/asi-AMSR2-n3125-*-v5.4.zarr" # [YYYY]/asi-AMSR2-n3125-[YYMMDD]-v5.4.zarr
     keep_variables:
     - "x"
@@ -38,8 +55,8 @@ sources:
     url: "https://s3.eu-west-2.wasabisys.com"
     s3_bucket: "ppr-ocean-climat"
     s3_folder: "DC3/IABP"
-    s3_key: *WASABI_KEY # TODO: Define this
-    s3_secret_key: *WASABI_SECRET_KEY # TODO: Define this
+    s3_key: *WASABI_KEY
+    s3_secret_key: *WASABI_SECRET_KEY
     file_pattern: "LEVEL1_*.zarr" # LEVEL1_[YYYY].zarr
     keep_variables:
     - "BuoyID"
@@ -60,8 +77,8 @@ sources:
     url: "https://s3.eu-west-2.wasabisys.com"
     s3_bucket: "ppr-ocean-climat"
     s3_folder: "DC3/MODIS"
-    s3_key: *WASABI_KEY # TODO: Define this
-    s3_secret_key: *WASABI_SECRET_KEY # TODO: Define this
+    s3_key: *WASABI_KEY
+    s3_secret_key: *WASABI_SECRET_KEY
     file_pattern: "*_ArcLeads.zarr" # [YYYY][YY+1]_ArcLeads.zarr
     keep_variables:
     - "lat"
