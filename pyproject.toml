@@ -1,6 +1,6 @@
 [project]
 name = "dc3"
-description = "Marine Biodiversity Prediction data challenge."
+description = "Sea Ice Forecasting Data Challenge."
 readme = "README.md"
 authors = [
     {name="Kamel Ait Mohand"},
@@ -43,10 +43,10 @@ mypy = "*"
 
 
 [tool.poetry.group.custom.dependencies]
-oceanbench = {git = "ssh://git@github.com/Articoking/oceanbench", branch = "main"}
+oceanbench = {git = "ssh://git@github.com/aitmohandk/oceanbench", branch = "main"}
 xrpatcher = {git = "ssh://git@github.com/jejjohnson/xrpatcher", branch = "main"}
 xesmf = {git = "git+https://github.com/pangeo-data/xESMF.git"}
-dctools = { git = "ssh://git@github.com/ppr-ocean-ia/dc-tools.git", branch = "main"}
+dctools = { git = "ssh://git@github.com/ppr-ocean-ia/dc-tools.git", branch = "class4_metrics"} # Set branch to main after merging
 
 [tool.poetry.group.docs]
 optional = true

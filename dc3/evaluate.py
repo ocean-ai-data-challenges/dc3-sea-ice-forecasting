@@ -36,8 +36,10 @@ def main() -> int:
         vars(args)['data_dir2'] = os.path.join(args.data_directory, 'data2')
         vars(args)['weights_path'] = os.path.join(args.data_directory, 'weights')
 
-        os.makedirs(args.data_dir1, exist_ok=True)
-        os.makedirs(args.data_dir2, exist_ok=True)
+        if os.path.exists(args.regridder_weights):
+            os.remove(args.regridder_weights)
+
+        os.makedirs(args.catalog_dir, exist_ok=True)
 
         evaluator_instance = DC3Evaluation(args)
         evaluator_instance.run_eval()
@@ -45,7 +47,6 @@ def main() -> int:
         return 0
 
     except KeyboardInterrupt:
-        # raise Exception("Manual abort.")
         print("Manual abort.")
         # Error = non-zero return code
         return 1

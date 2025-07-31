@@ -2,6 +2,9 @@
 docs/build/
 docs/source/_autosummary/
 
+# VS Code
+.vscode
+
 # Generated automatically
 # https://getgitignore.com/Python
 
