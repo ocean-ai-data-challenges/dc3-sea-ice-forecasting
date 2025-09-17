@@ -12,6 +12,7 @@ from argparse import Namespace
 from dask.distributed import Client
 import geopandas as gpd
 from loguru import logger
+from oceanbench.core.distributed import DatasetProcessor
 import pandas as pd
 from shapely import geometry
 
@@ -34,13 +35,23 @@ class DC3Evaluation:
     """Class to evaluate models."""
 
     def __init__(self, arguments: Namespace) -> None:
-        """Init class.
+        """
+        Init function.
 
-        Args:
-            aruguments (str): Namespace with config.
+        Parameters
+        ----------
+        arguments : Namespace
+            Namespace with config.
         """
         self.args = arguments
-        self.dataset_references = {} # 
+        self.dataset_references = {} # TODO?
+        memory_limit_per_worker = self.args.memory_limit_per_worker
+        n_parallel_workers = self.args.n_parallel_workers
+        self.dataset_processor = DatasetProcessor(
+            distributed=True, n_workers=n_parallel_workers,
+            threads_per_worker=1,
+            memory_limit=memory_limit_per_worker
+        )
 
     def filter_data(
         self,
@@ -49,13 +60,15 @@ class DC3Evaluation:
     ) -> MultiSourceDatasetManager:
         
         manager.filter_all_by_date(
-            start=pd.to_datetime(self.args.start_times),
-            end=pd.to_datetime(self.args.end_times),
+            start=pd.to_datetime(self.args.start_time),
+            end=pd.to_datetime(self.args.end_time),
         )
 
-        manager.filter_all_by_region(
-            region=filter_region
-        )
+        # TODO: Check problem with dc-tools.
+        # Otherwise no spatial filtering possible in polar grid
+        # manager.filter_all_by_region(
+        #     region=filter_region
+        # )
 
         return manager
 
@@ -78,14 +91,24 @@ class DC3Evaluation:
         self,
         dataloader: EvaluationDataloader,
     ) -> None:
-        # TODO
+        # TODO: Test this.
+        for batch in dataloader:
+            logger.debug(f"Batch: {batch}")
+            # Vérifier que le batch contient les clés attendues
+            assert "pred_data" in batch[0]
+            assert "ref_data" in batch[0]
+            # Vérifier que les données sont de type str (paths)
+            assert isinstance(batch[0]["pred_data"], str)
+            if batch[0]["ref_data"]:
+                assert isinstance(batch[0]["ref_data"], str)
         pass
 
     def setup_dataset_manager(self) -> MultiSourceDatasetManager:
         # TODO
         manager = MultiSourceDatasetManager(
-            pd.Timedelta(hours=self.args.delta_time),
-            self.args.max_cache_files,
+            dataset_processor=self.dataset_processor,
+            time_tolerance=pd.Timedelta(hours=self.args.delta_time),
+            max_cache_files=self.args.max_cache_files,
         )
 
         datasets = {}
@@ -99,8 +122,17 @@ class DC3Evaluation:
             kwargs["source"] = source
             kwargs["root_data_folder"] = self.args.data_directory
             kwargs["root_catalog_folder"] = self.args.catalog_dir
+            kwargs["dataset_processor"] = self.dataset_processor
             kwargs["max_samples"] = self.args.max_samples
             kwargs["file_cache"] = manager.file_cache
+            kwargs["filter_values"] = {
+                "start_time": self.args.start_time,
+                "end_time": self.args.end_time,
+                "min_x": self.args.min_x,
+                "max_x": self.args.max_x,
+                "min_y": self.args.min_y,
+                "max_y": self.args.max_y,
+            }
             logger.debug(f"\n\nSetup dataset {source_name}\n\n")
             datasets[source_name] = get_dataset_from_config(
                 **kwargs
@@ -133,14 +165,15 @@ class DC3Evaluation:
         evaluators = {}
         models_results = {}
         transforms_dict = self.setup_transforms(dataset_manager, aliases)
+        json_path=os.path.join(self.args.catalog_dir, f"all_test_results.json")
 
         for alias in self.dataset_references.keys():
-            json_path=os.path.join(self.args.catalog_dir, f"all_test_results.json")
             dataset_manager.build_forecast_index(
                 alias,
                 # TODO: init_date and end_date assume a single start and end
                 #       time. What do we do when we have only the winters in the
                 #       reference data?
+                # NOTE: We only consider one winter for the time being.
                 init_date=self.args.start_time,
                 end_date=self.args.end_time,
                 n_days_forecast=int(self.args.n_days_forecast),

@@ -32,9 +32,9 @@ def main() -> int:
             print("Config loading failed.")
             return 1
 
-        vars(args)['data_dir1'] = os.path.join(args.data_directory, 'data1')
-        vars(args)['data_dir2'] = os.path.join(args.data_directory, 'data2')
-        vars(args)['weights_path'] = os.path.join(args.data_directory, 'weights')
+        vars(args)['regridder_weights'] = os.path.join(args.data_directory, 'weights')
+        vars(args)['catalog_dir'] = os.path.join(args.data_directory, "catalogs")
+        vars(args)['result_dir'] = os.path.join(args.data_directory, "results")
 
         if os.path.exists(args.regridder_weights):
             os.remove(args.regridder_weights)
