@@ -58,7 +58,8 @@ class DC3Evaluation:
         manager: MultiSourceDatasetManager,
         filter_region: gpd.GeoSeries,        
     ) -> MultiSourceDatasetManager:
-        
+
+        # TODO: Check problem with filtering for MODIS/IABP
         manager.filter_all_by_date(
             start=pd.to_datetime(self.args.start_time),
             end=pd.to_datetime(self.args.end_time),

@@ -3,9 +3,10 @@
 ################################################################
 ##  WASABI credentials
 define: &WASABI_KEY
+  
 
 define: &WASABI_SECRET_KEY
-
+  
 ############################# GENERAL DC PARAMETERS ###################################
 
 max_samples: 1
@@ -25,13 +26,11 @@ memory_limit_per_worker: "6GB"
 
 ## List of start dates
 # start_times:
-start_time:
-  - "2022-11-01"
+start_time: "2010-11-01"
   # - "202'-11-01"
 
 # end_times:
-end_time:
-  - "2023-05-01"
+end_time: "2011-05-01"
   # - "2024-05-01"
 
 # Target region coordinates (in meters)
@@ -51,9 +50,9 @@ max_y: 5850000
 
 sources:
   # - dataset: amsr2
-    # time_tolerance: 12
-    # metrics:
-    #   - "rmsd"
+  #   time_tolerance: 12
+  #   metrics:
+  #     - "rmsd"
   #   config: "s3"
   #   connection_type: "wasabi"
   #   url: "https://s3.eu-west-2.wasabisys.com"
@@ -71,7 +70,6 @@ sources:
   #   - "lon"
   #   eval_variables:
   #   - "z"
-  # 
 
   - dataset: iabp
     observation_dataset: true
