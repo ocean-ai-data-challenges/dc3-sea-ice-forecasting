@@ -2,14 +2,12 @@
 # This file lists variables used in configuring dc3 evaluation 
 ################################################################
 ##  WASABI credentials
-define: &WASABI_KEY
-  
-
-define: &WASABI_SECRET_KEY
+define: &WASABI_KEY 
+define: &WASABI_SECRET_KEY 
   
 ############################# GENERAL DC PARAMETERS ###################################
 
-max_samples: 1
+max_samples: 
 max_cache_files: 1000
 delta_time: 12
 
@@ -20,6 +18,7 @@ n_days_interval: 365 # One for each year
 
 batch_size: 32
 n_parallel_workers: 8
+nthreads_per_worker: 4
 memory_limit_per_worker: "6GB"
 
 ############################# DATA FILTERS ###################################

@@ -16,13 +16,17 @@ from oceanbench.core.distributed import DatasetProcessor
 import pandas as pd
 from shapely import geometry
 
+from dctools.data.coordinates import (
+    TARGET_DIM_RANGES,
+    get_standardized_var_name,
+)
 from dctools.data.datasets.dataset import get_dataset_from_config
 from dctools.data.datasets.dataloader import EvaluationDataloader
 from dctools.data.datasets.dataset_manager import MultiSourceDatasetManager
-
 from dctools.data.transforms import CustomTransforms
 from dctools.metrics.evaluator import Evaluator
 from dctools.metrics.metrics import MetricComputer
+from dctools.metrics.oceanbench_metrics import get_variable_alias
 from dctools.utilities.init_dask import setup_dask
 from dctools.utilities.misc_utils import (
     make_serializable,
@@ -45,11 +49,22 @@ class DC3Evaluation:
         """
         self.args = arguments
         self.dataset_references = {} # TODO?
+
+        self.dataset_references = {
+            "modis": [
+                "iabp",
+            ]
+        }
+        self.all_datasets = list(set(
+            list(self.dataset_references.keys()) + 
+            [item for sublist in self.dataset_references.values() for item in sublist]
+        ))
         memory_limit_per_worker = self.args.memory_limit_per_worker
         n_parallel_workers = self.args.n_parallel_workers
+        nthreads_per_worker = self.args.nthreads_per_worker
         self.dataset_processor = DatasetProcessor(
             distributed=True, n_workers=n_parallel_workers,
-            threads_per_worker=1,
+            threads_per_worker=nthreads_per_worker,
             memory_limit=memory_limit_per_worker
         )
 
@@ -104,21 +119,28 @@ class DC3Evaluation:
                 assert isinstance(batch[0]["ref_data"], str)
         pass
 
-    def setup_dataset_manager(self) -> MultiSourceDatasetManager:
+    def setup_dataset_manager(self, list_all_references: list[str]) -> MultiSourceDatasetManager:
         # TODO
         manager = MultiSourceDatasetManager(
             dataset_processor=self.dataset_processor,
+            target_dimensions=TARGET_DIM_RANGES,
             time_tolerance=pd.Timedelta(hours=self.args.delta_time),
+            list_references=list_all_references,
             max_cache_files=self.args.max_cache_files,
         )
 
         datasets = {}
 
-        for source in self.args.sources:
+        for source in sorted(self.args.sources, key=lambda x: x["dataset"], reverse=False):
             source_name = source['dataset']
+
+            if source_name not in self.all_datasets:
+                logger.warning(f"Dataset {source_name} is not supported yet, skipping.")
+                continue
             if source_name not in ["modis", "amsr2", "iabp"]:
                 logger.warning(f"Dataset {source_name} is not supported yet, skipping.")
                 continue
+
             kwargs = {}
             kwargs["source"] = source
             kwargs["root_data_folder"] = self.args.data_directory
@@ -154,7 +176,7 @@ class DC3Evaluation:
         
     def run_eval(self) -> None:
         """Proceed to evaluation."""
-        dataset_manager = self.setup_dataset_manager()
+        dataset_manager = self.setup_dataset_manager(self.all_datasets)
         aliases = dataset_manager.datasets.keys()
         dask_cluster = setup_dask(self.args)
         dask_client = Client(dask_cluster)
@@ -180,7 +202,9 @@ class DC3Evaluation:
                 n_days_forecast=int(self.args.n_days_forecast),
                 n_days_interval=int(self.args.n_days_interval),
             )
-            list_references = self.dataset_references[alias]
+            list_references = [
+                ref for ref in self.dataset_references[alias] if ref in dataset_manager.datasets
+            ]
             pred_source_dict = next((s for s in self.args.sources if s.get("dataset") == alias), {})
             metric_names[alias] = pred_source_dict.get("metrics", ["rmsd"])
 
@@ -188,25 +212,45 @@ class DC3Evaluation:
             ref_transforms = {}
             metrics[alias] = {}
             pred_transform = transforms_dict.get(alias)
-            for ref_alias in  list_references:
+            for ref_alias in list_references:
+                # Vérifier que le dataset de référence existe
+                if ref_alias not in dataset_manager.datasets:
+                    logger.warning(f"Reference dataset '{ref_alias}' not found in dataset manager. Skipping.")
+                    continue
                 ref_source_dict = next((s for s in self.args.sources if s.get("dataset") == ref_alias), {})
                 ref_transforms[ref_alias] = transforms_dict.get(ref_alias)
                 metric_names[ref_alias] = ref_source_dict.get("metrics", ["rmsd"])
                 ref_is_observation = dataset_manager.datasets[ref_alias].get_global_metadata()["is_observation"]
                 pred_eval_vars = dataset_manager.datasets[alias].get_eval_variables()
+                ref_eval_vars = dataset_manager.datasets[ref_alias].get_eval_variables()
+
+                # Common variables
+                common_vars = [get_standardized_var_name(var) for var in pred_eval_vars if var in ref_eval_vars]
+                if not common_vars:
+                    logger.warning("No common variables found between pred_data and ref_data for evaluation.")
+                    continue
+                oceanbench_eval_variables = [   # Oceanbench lib format
+                    get_variable_alias(var) for var in common_vars
+                ] if common_vars else None
+
+                # common metrics
                 common_metrics = [metric for metric in metric_names[alias] if metric in metric_names[ref_alias]]
                 metrics_kwargs[alias][ref_alias] = {
                     "add_noise": False,
-                    "eval_variables": pred_eval_vars,
                 }
                 if not ref_is_observation:
                     metrics[alias][ref_alias] = [
-                        MetricComputer(metric_name=metric, **metrics_kwargs[alias][ref_alias])
+                        MetricComputer(
+                            common_vars,
+                            oceanbench_eval_variables,
+                            metric_name=metric,
+                            **metrics_kwargs[alias][ref_alias],
+                        )
                         for metric in common_metrics
                     ]
                 else:
                     interpolation_method = ref_source_dict.get(
-                        "interpolation_method", "kdtree"
+                        "interpolation_method", "pyinterp"
                     )
                     time_tolerance = ref_source_dict.get("time_tolerance", None)
                     time_tolerance = timedelta(hours=time_tolerance)
@@ -217,6 +261,8 @@ class DC3Evaluation:
                     }
                     metrics[alias][ref_alias] = [
                         MetricComputer(
+                            common_vars,
+                            oceanbench_eval_variables,
                             metric_name=metric,
                             is_class4=True,
                             class4_kwargs=class4_kwargs,
@@ -241,15 +287,17 @@ class DC3Evaluation:
             # self.check_dataloader(dataloaders[alias])
 
             evaluators[alias] = Evaluator(
-                dask_client=dask_client,
+                dataset_manager=dataset_manager,
                 metrics=metrics[alias],
                 dataloader=dataloaders[alias],
                 ref_aliases=list_references,
+                dataset_processor=self.dataset_processor,
             )
 
+            logger.info(f"\n\n\n=========  START EVALUATION FOR CANDIDATE : {alias}  =========")
             models_results[alias] = evaluators[alias].evaluate()
 
-
+        # Eval has finished. Process results and write JSON
         try:
             # Sérialiser tous les résultats
             serialized_results = {}
