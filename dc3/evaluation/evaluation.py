@@ -51,9 +51,9 @@ class DC3Evaluation:
         self.dataset_references = {} # TODO?
 
         self.dataset_references = {
-            "modis": [
-                "iabp",
-            ]
+            "topaz": [
+                "amsr2",
+            ],
         }
         self.all_datasets = list(set(
             list(self.dataset_references.keys()) + 
@@ -135,11 +135,11 @@ class DC3Evaluation:
             source_name = source['dataset']
 
             if source_name not in self.all_datasets:
-                logger.warning(f"Dataset {source_name} is not supported yet, skipping.")
+                logger.warning(f"Dataset {source_name} is not used for the evaluation, skipping.")
                 continue
-            if source_name not in ["modis", "amsr2", "iabp"]:
-                logger.warning(f"Dataset {source_name} is not supported yet, skipping.")
-                continue
+            # if source_name not in ["modis", "amsr2", "iabp", "topaz"]:
+            #     logger.warning(f"Dataset {source_name} is not supported yet, skipping.")
+            #     continue
 
             kwargs = {}
             kwargs["source"] = source

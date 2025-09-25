@@ -2,8 +2,10 @@
 # This file lists variables used in configuring dc3 evaluation 
 ################################################################
 ##  WASABI credentials
-define: &WASABI_KEY 
-define: &WASABI_SECRET_KEY 
+define: &WASABI_KEY
+  
+define: &WASABI_SECRET_KEY
+  
   
 ############################# GENERAL DC PARAMETERS ###################################
 
@@ -25,11 +27,11 @@ memory_limit_per_worker: "6GB"
 
 ## List of start dates
 # start_times:
-start_time: "2010-11-01"
+start_time: "2020-11-01"
   # - "202'-11-01"
 
 # end_times:
-end_time: "2011-05-01"
+end_time: "2021-05-01"
   # - "2024-05-01"
 
 # Target region coordinates (in meters)
@@ -48,27 +50,27 @@ max_y: 5850000
 ############################# DATASETS ###################################
 
 sources:
-  # - dataset: amsr2
-  #   time_tolerance: 12
-  #   metrics:
-  #     - "rmsd"
-  #   config: "s3"
-  #   connection_type: "wasabi"
-  #   url: "https://s3.eu-west-2.wasabisys.com"
-  #   s3_bucket: "ppr-ocean-climat"
-  #   s3_folder: "DC3/AMSR2"
-  #   s3_key: *WASABI_KEY
-  #   s3_secret_key: *WASABI_SECRET_KEY
-  #   file_pattern: "**/asi-AMSR2-n3125-*-v5.4.zarr" # [YYYY]/asi-AMSR2-n3125-[YYMMDD]-v5.4.zarr
-  #   keep_variables:
-  #   - "y"
-  #   - "x"
-  #   - "time"
-  #   - "z"
-  #   - "lat"
-  #   - "lon"
-  #   eval_variables:
-  #   - "z"
+  - dataset: amsr2
+    time_tolerance: 12
+    metrics:
+      - "rmsd"
+    config: "s3"
+    connection_type: "wasabi"
+    url: "https://s3.eu-west-2.wasabisys.com"
+    s3_bucket: "ppr-ocean-climat"
+    s3_folder: "DC3/AMSR2"
+    s3_key: *WASABI_KEY
+    s3_secret_key: *WASABI_SECRET_KEY
+    file_pattern: "**/asi-AMSR2-n3125-*-v5.4.zarr" # [YYYY]/asi-AMSR2-n3125-[YYMMDD]-v5.4.zarr
+    keep_variables:
+    - "y"
+    - "x"
+    - "time"
+    - "z"
+    - "lat"
+    - "lon"
+    eval_variables:
+    - "z"
 
   - dataset: iabp
     observation_dataset: true
@@ -117,3 +119,23 @@ sources:
     - "leadmap"
     eval_variables:
     - "leadmap"
+
+  - dataset: topaz
+    observation_dataset: false
+    metrics:
+      - "rmsd"
+    config: "s3"
+    connection_type: "wasabi"
+    url: "https://s3.eu-west-2.wasabisys.com"
+    s3_bucket: "ppr-ocean-climat"
+    s3_folder: "DC3/TOPAZ"
+    s3_key: *WASABI_KEY
+    s3_secret_key: *WASABI_SECRET_KEY
+    file_pattern: "**/**/*.zarr"
+    keep_variables:
+    - "y"
+    - "x"
+    - "time"
+    - "siconc"
+    eval_variables:
+    - "siconc"
