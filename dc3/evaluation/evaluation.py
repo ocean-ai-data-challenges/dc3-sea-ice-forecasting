@@ -99,7 +99,12 @@ class DC3Evaluation:
                 "to_epsg3413",
                 dataset_alias="iabp",
             )
-        # NOTE: MODIS and ASMR2 data are already pre-processed and therefore
+        if "amsr2" in aliases:
+            transforms_dict["amsr2"] = manager.get_transform(
+                "standardize",
+                dataset_alias="amsr2",
+            )
+        # NOTE: MODIS data are already pre-processed and therefore
         #       don't need to be standardized
         return transforms_dict
 
