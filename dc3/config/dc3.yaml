@@ -69,8 +69,8 @@ sources:
     - "x"
     - "time"
     - "z"
-    - "lat"
-    - "lon"
+    # - "lat"
+    # - "lon"
     eval_variables:
     - "z"
 

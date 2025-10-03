@@ -34,6 +34,11 @@ from dctools.utilities.misc_utils import (
     transform_in_place,
 )
 
+import numpy as np
+DC3_DIM_RANGES = {
+    "x": np.arange(-3850000, 3750000, 3250),
+    "y": np.arange(-5350000, 5850000, 3250),
+}
 
 class DC3Evaluation:
     """Class to evaluate models."""
@@ -128,7 +133,7 @@ class DC3Evaluation:
         # TODO
         manager = MultiSourceDatasetManager(
             dataset_processor=self.dataset_processor,
-            target_dimensions=TARGET_DIM_RANGES,
+            target_dimensions=DC3_DIM_RANGES,
             time_tolerance=pd.Timedelta(hours=self.args.delta_time),
             list_references=list_all_references,
             max_cache_files=self.args.max_cache_files,
