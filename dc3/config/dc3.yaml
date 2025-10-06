@@ -13,8 +13,7 @@ max_samples:
 max_cache_files: 1000
 delta_time: 12
 
-n_days_forecast: 10
-# n_days_forecast: 181 # Seasonal forecast # TODO: Uncomment when debugged
+n_days_forecast: 181 # Seasonal forecast # TODO: Uncomment when debugged
 n_days_interval: 365 # One for each year
 
 ############################# PARALLELIZATION ###################################
@@ -26,15 +25,8 @@ memory_limit_per_worker: "6GB"
 
 ############################# DATA FILTERS ###################################
 
-## List of start dates
-# start_times:
 start_time: "2020-11-01"
-  # - "202'-11-01"
-
-# end_times:
-end_time: "2020-11-11" # 10 days for debugging 
-# end_time: "2021-05-01" # TODO: Uncomment when debugged
-  # - "2024-05-01"
+end_time: "2021-05-01"
 
 # Target region coordinates (in meters)
 # NOTE: Coordinates in EPSG:3413 (Arctic) grid
@@ -69,8 +61,6 @@ sources:
     - "x"
     - "time"
     - "z"
-    # - "lat"
-    # - "lon"
     eval_variables:
     - "z"
 
@@ -130,7 +120,7 @@ sources:
     connection_type: "wasabi"
     url: "https://s3.eu-west-2.wasabisys.com"
     s3_bucket: "ppr-ocean-climat"
-    s3_folder: "DC3/TOPAZ"
+    s3_folder: "DC3/TOPAZ_percentage_siconc" # TODO: Change back to TOPAZ when transform is implemented
     s3_key: *WASABI_KEY
     s3_secret_key: *WASABI_SECRET_KEY
     file_pattern: "**/**/*.zarr"
