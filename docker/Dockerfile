@@ -241,8 +241,8 @@ RUN find "${HOME}" -not -user "${USERNAME}" -execdir chown --no-dereference "${U
 USER ${USERNAME}
 WORKDIR ${WORKSPACE_DIR}
 
-# Copy dc3 project files
-COPY --chown=${USERNAME}:${GROUPNAME} dc3 ./dc3
+# Copy ${DC_NAME} project files
+COPY --chown=${USERNAME}:${GROUPNAME} ${DC_NAME} ./${DC_NAME}
 COPY --chown=${USERNAME}:${GROUPNAME} notebooks ./notebooks
 
 # =======================
