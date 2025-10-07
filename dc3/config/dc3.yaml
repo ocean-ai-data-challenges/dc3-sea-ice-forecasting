@@ -3,9 +3,9 @@
 ################################################################
 ##  WASABI credentials
 define: &WASABI_KEY
-  
+  A10PTBP92GOXQW8OPE8G
 define: &WASABI_SECRET_KEY
-  
+  1C1Iscst7rfDnXp5eM8DtL7AkFiUAycINzctMEGQ
   
 ############################# GENERAL DC PARAMETERS ###################################
 
@@ -13,15 +13,15 @@ max_samples:
 max_cache_files: 1000
 delta_time: 12
 
-n_days_forecast: 181 # Seasonal forecast # TODO: Uncomment when debugged
+n_days_forecast: 181 # Seasonal forecast
 n_days_interval: 365 # One for each year
 
 ############################# PARALLELIZATION ###################################
 
 batch_size: 32
-n_parallel_workers: 8
+n_parallel_workers: 6
 nthreads_per_worker: 4
-memory_limit_per_worker: "6GB"
+memory_limit_per_worker: "4GB"
 
 ############################# DATA FILTERS ###################################
 
