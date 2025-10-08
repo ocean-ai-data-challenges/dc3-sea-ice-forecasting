@@ -7,7 +7,7 @@ Start the build
 
 - Set the tag (do not use `latest` or `stable`)
 ```bash
-export IMAGE_TAG=0.0.1
+export IMAGE_TAG=0.1.0
 ```
 - Build the image
 ```bash
