@@ -7,14 +7,36 @@ define: &WASABI_KEY
 define: &WASABI_SECRET_KEY
   1C1Iscst7rfDnXp5eM8DtL7AkFiUAycINzctMEGQ
   
+############################# LOGGING ###################################
+
+logging:
+  # Loguru level for console + (optional) logfile.
+  # Typical values: TRACE, DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: INFO
+  # Set to false if you want a quiet console even when a logfile is enabled.
+  console: true
+  colorize: true
+  backtrace: false
+  diagnose: false
+  # Synchronous logging (false) ensures model/reference boxes printed via
+  # logger appear in the correct order relative to print() calls in dctools.
+  enqueue: false
+  # Standard-library logging level (affects e.g. dask.distributed logs)
+  python_level: WARNING
+
 ############################# GENERAL DC PARAMETERS ###################################
 
 max_samples: 
 max_cache_files: 1000
 delta_time: 12
 
-n_days_forecast: 181 # Seasonal forecast
+n_days_forecast: 181 # Seasonal forecast (181 days)
 n_days_interval: 365 # One for each year
+
+# Model -> references mapping used by the evaluation engine.
+dataset_references:
+  topaz:
+    - amsr2
 
 ############################# PARALLELIZATION ###################################
 
@@ -33,6 +55,11 @@ end_time: "2021-05-01"
 #       x range from -3 850 000 to 3 750 000
 #       y range from -5 350 000 to 5 850 000
 
+# Target dimensions used for interpolation/standardization.
+target_dimensions:
+  x: {start: -3850000, stop: 3750000, step: 3250}
+  y: {start: -5350000, stop: 5850000, step: 3250}
+
 min_x: -3850000
 max_x: 3750000
 min_y: -5350000
@@ -40,12 +67,20 @@ max_y: 5850000
 
 # Path to catalog file
 # catalog_path: ""
+############################# PER-BINS SPATIAL RESOLUTION ###################################
 
+# Resolution (in degrees) for per-bin RMSD spatial breakdown.
+# A lower value gives finer maps but larger per_bins JSON files.
+# Examples: 2 → 2°×2°, 5 → 5°×5°, 10 → 10°×10°
+# For the Arctic (60–90°N), 2° gives ~1 800 bins which is reasonable.
+per_bins_resolution: 2
 ############################# DATASETS ###################################
 
 sources:
   - dataset: amsr2
     time_tolerance: 12
+    ignore_geometry: true
+    observation_dataset: false
     metrics:
       - "rmsd"
     config: "s3"
@@ -61,6 +96,8 @@ sources:
     - "x"
     - "time"
     - "z"
+    - "lat"
+    - "lon"
     eval_variables:
     - "z"
 
@@ -129,5 +166,7 @@ sources:
     - "x"
     - "time"
     - "siconc"
+    - "latitude"
+    - "longitude"
     eval_variables:
     - "siconc"

@@ -1,0 +1,3095 @@
+{
+  "dataset": "topaz",
+  "results": {
+    "topaz": [
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 49.2512522374786
+          }
+        ],
+        "duration_s": 1.9727157259985688,
+        "preprocess_s": 2.7372409059971687,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 0,
+        "valid_time": "2020-11-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 50.07028854649366
+          }
+        ],
+        "duration_s": 1.9287092520025908,
+        "preprocess_s": 2.6760889099969063,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 1,
+        "valid_time": "2020-11-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 51.74450402522533
+          }
+        ],
+        "duration_s": 2.188584561998141,
+        "preprocess_s": 2.4879463460019906,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 2,
+        "valid_time": "2020-11-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 52.07604167897925
+          }
+        ],
+        "duration_s": 1.9287945219984977,
+        "preprocess_s": 2.7699162990029436,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 3,
+        "valid_time": "2020-11-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 53.10371987919407
+          }
+        ],
+        "duration_s": 2.0700368710022303,
+        "preprocess_s": 2.5450014759990154,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 4,
+        "valid_time": "2020-11-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 54.05590316256233
+          }
+        ],
+        "duration_s": 2.1280753149985685,
+        "preprocess_s": 2.4335834680023254,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 5,
+        "valid_time": "2020-11-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 55.12023365226989
+          }
+        ],
+        "duration_s": 1.9075840660007088,
+        "preprocess_s": 0.8000168340004166,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 6,
+        "valid_time": "2020-11-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 56.008462328578155
+          }
+        ],
+        "duration_s": 2.1129758300012327,
+        "preprocess_s": 0.7577945869998075,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 7,
+        "valid_time": "2020-11-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 56.57256047194117
+          }
+        ],
+        "duration_s": 2.0055442439988838,
+        "preprocess_s": 0.760712887000409,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 8,
+        "valid_time": "2020-11-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 57.377789545705326
+          }
+        ],
+        "duration_s": 1.9770949450030457,
+        "preprocess_s": 0.8146898339982727,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 9,
+        "valid_time": "2020-11-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 56.77433864707977
+          }
+        ],
+        "duration_s": 1.915823390998412,
+        "preprocess_s": 0.8132907670005807,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 10,
+        "valid_time": "2020-11-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 57.81435478720771
+          }
+        ],
+        "duration_s": 1.9782281119987601,
+        "preprocess_s": 0.7826732989997254,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 11,
+        "valid_time": "2020-11-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.86042894970785
+          }
+        ],
+        "duration_s": 1.8794931240045116,
+        "preprocess_s": 0.8010447510023369,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 60,
+        "valid_time": "2020-12-31T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.90083447662316
+          }
+        ],
+        "duration_s": 1.856971043998783,
+        "preprocess_s": 0.7843909069997608,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 61,
+        "valid_time": "2021-01-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.71777692157237
+          }
+        ],
+        "duration_s": 1.7973867489999975,
+        "preprocess_s": 0.8090005279955221,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 62,
+        "valid_time": "2021-01-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.62145525341873
+          }
+        ],
+        "duration_s": 2.1866047680014162,
+        "preprocess_s": 0.8883713910036022,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 63,
+        "valid_time": "2021-01-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.99895064451684
+          }
+        ],
+        "duration_s": 1.8864130830042996,
+        "preprocess_s": 0.8587303989988868,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 64,
+        "valid_time": "2021-01-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.15478536962567
+          }
+        ],
+        "duration_s": 2.067876843000704,
+        "preprocess_s": 0.8616977690035128,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 65,
+        "valid_time": "2021-01-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.65938927968732
+          }
+        ],
+        "duration_s": 1.8969410680001602,
+        "preprocess_s": 0.7806515209958889,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 66,
+        "valid_time": "2021-01-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.53223037141936
+          }
+        ],
+        "duration_s": 1.8260218680006801,
+        "preprocess_s": 1.0183430739998585,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 67,
+        "valid_time": "2021-01-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.6540395178925
+          }
+        ],
+        "duration_s": 1.9448951879967353,
+        "preprocess_s": 0.8301163800060749,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 68,
+        "valid_time": "2021-01-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.35561745584843
+          }
+        ],
+        "duration_s": 1.7058098220004467,
+        "preprocess_s": 0.8880249709982309,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 69,
+        "valid_time": "2021-01-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.4566112913403
+          }
+        ],
+        "duration_s": 1.976122015999863,
+        "preprocess_s": 0.8344262379978318,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 70,
+        "valid_time": "2021-01-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.73575506192306
+          }
+        ],
+        "duration_s": 1.813920742002665,
+        "preprocess_s": 0.8045918320058263,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 71,
+        "valid_time": "2021-01-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.51242281867977
+          }
+        ],
+        "duration_s": 1.9491990780006745,
+        "preprocess_s": 0.7767386749983416,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 72,
+        "valid_time": "2021-01-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.20992171850153
+          }
+        ],
+        "duration_s": 1.841167498001596,
+        "preprocess_s": 0.8378864379992592,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 73,
+        "valid_time": "2021-01-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.60833627158424
+          }
+        ],
+        "duration_s": 2.012920071996632,
+        "preprocess_s": 0.9776654300003429,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 74,
+        "valid_time": "2021-01-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.42186248334191
+          }
+        ],
+        "duration_s": 1.8136738809989765,
+        "preprocess_s": 0.7759093309941818,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 75,
+        "valid_time": "2021-01-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.67757138595108
+          }
+        ],
+        "duration_s": 1.8782686490012566,
+        "preprocess_s": 0.8602856229990721,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 76,
+        "valid_time": "2021-01-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.32754466641768
+          }
+        ],
+        "duration_s": 1.8794216370006325,
+        "preprocess_s": 0.8303594300014083,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 77,
+        "valid_time": "2021-01-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.73290532884467
+          }
+        ],
+        "duration_s": 2.0304700569977285,
+        "preprocess_s": 0.9784717590009677,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 78,
+        "valid_time": "2021-01-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.80348661367282
+          }
+        ],
+        "duration_s": 1.8317247129962198,
+        "preprocess_s": 0.9364922929962631,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 79,
+        "valid_time": "2021-01-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.25581935045521
+          }
+        ],
+        "duration_s": 1.8371666019957047,
+        "preprocess_s": 0.8380542890008655,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 80,
+        "valid_time": "2021-01-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.3510592737392
+          }
+        ],
+        "duration_s": 1.930748209997546,
+        "preprocess_s": 0.7797807450042455,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 81,
+        "valid_time": "2021-01-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.87054754612387
+          }
+        ],
+        "duration_s": 1.8791534660049365,
+        "preprocess_s": 0.886235714002396,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 82,
+        "valid_time": "2021-01-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.00340947222351
+          }
+        ],
+        "duration_s": 2.019654712996271,
+        "preprocess_s": 0.8480431179996231,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 83,
+        "valid_time": "2021-01-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.38856371602952
+          }
+        ],
+        "duration_s": 1.864462443998491,
+        "preprocess_s": 0.8126261310026166,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 84,
+        "valid_time": "2021-01-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.52671509966399
+          }
+        ],
+        "duration_s": 1.9470908060029615,
+        "preprocess_s": 0.805035521996615,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 85,
+        "valid_time": "2021-01-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.5518735126175
+          }
+        ],
+        "duration_s": 1.9966206579993013,
+        "preprocess_s": 0.942400316002022,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 86,
+        "valid_time": "2021-01-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.33985618775039
+          }
+        ],
+        "duration_s": 1.7337356610005372,
+        "preprocess_s": 0.812096620000375,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 87,
+        "valid_time": "2021-01-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.97118666798
+          }
+        ],
+        "duration_s": 1.7836936109961243,
+        "preprocess_s": 0.833664896999835,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 88,
+        "valid_time": "2021-01-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.06186023632172
+          }
+        ],
+        "duration_s": 1.8251987719995668,
+        "preprocess_s": 0.9390987079968909,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 89,
+        "valid_time": "2021-01-29T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.17977502993757
+          }
+        ],
+        "duration_s": 1.867479025000648,
+        "preprocess_s": 0.8538752829990699,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 90,
+        "valid_time": "2021-01-30T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.77264542619629
+          }
+        ],
+        "duration_s": 1.9147170270007337,
+        "preprocess_s": 0.8665685610030778,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 91,
+        "valid_time": "2021-01-31T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.84370109182413
+          }
+        ],
+        "duration_s": 2.0032979829993565,
+        "preprocess_s": 0.9074179610033752,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 92,
+        "valid_time": "2021-02-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.26349006907456
+          }
+        ],
+        "duration_s": 1.8627234579980723,
+        "preprocess_s": 0.8463511099980678,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 93,
+        "valid_time": "2021-02-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.09061485416177
+          }
+        ],
+        "duration_s": 1.9617692500032717,
+        "preprocess_s": 0.8678258459985955,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 94,
+        "valid_time": "2021-02-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.31240763116351
+          }
+        ],
+        "duration_s": 1.849983369000256,
+        "preprocess_s": 0.8321400310014724,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 95,
+        "valid_time": "2021-02-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.24777266237756
+          }
+        ],
+        "duration_s": 1.8267803030030336,
+        "preprocess_s": 0.797121812000114,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 96,
+        "valid_time": "2021-02-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.8358167773025
+          }
+        ],
+        "duration_s": 1.8669107959940447,
+        "preprocess_s": 0.930049461996532,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 97,
+        "valid_time": "2021-02-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.85883646920097
+          }
+        ],
+        "duration_s": 1.6784719729985227,
+        "preprocess_s": 0.8843570399985765,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 98,
+        "valid_time": "2021-02-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.71479117473915
+          }
+        ],
+        "duration_s": 1.6749371699988842,
+        "preprocess_s": 0.792095466000319,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 99,
+        "valid_time": "2021-02-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.77954196451421
+          }
+        ],
+        "duration_s": 1.892904815998918,
+        "preprocess_s": 0.7531822540040594,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 100,
+        "valid_time": "2021-02-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.41729455829821
+          }
+        ],
+        "duration_s": 1.8031203499995172,
+        "preprocess_s": 0.8484727999966708,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 101,
+        "valid_time": "2021-02-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.53513160184876
+          }
+        ],
+        "duration_s": 2.121900830999948,
+        "preprocess_s": 0.8157986349979183,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 102,
+        "valid_time": "2021-02-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.80860581634344
+          }
+        ],
+        "duration_s": 1.795190636999905,
+        "preprocess_s": 0.9721870950015727,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 103,
+        "valid_time": "2021-02-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.63623998760902
+          }
+        ],
+        "duration_s": 1.8572604650034918,
+        "preprocess_s": 0.9000652690010611,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 104,
+        "valid_time": "2021-02-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.75198060927487
+          }
+        ],
+        "duration_s": 1.8878772419993766,
+        "preprocess_s": 0.8671263140058727,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 105,
+        "valid_time": "2021-02-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.81624543382637
+          }
+        ],
+        "duration_s": 1.839590846997453,
+        "preprocess_s": 0.7917698340024799,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 106,
+        "valid_time": "2021-02-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.644812010251
+          }
+        ],
+        "duration_s": 1.8703437450021738,
+        "preprocess_s": 0.7874611559964251,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 107,
+        "valid_time": "2021-02-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.6463535564532
+          }
+        ],
+        "duration_s": 1.9090563069985365,
+        "preprocess_s": 0.7554155440011527,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 108,
+        "valid_time": "2021-02-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.31847731348726
+          }
+        ],
+        "duration_s": 1.865092433996324,
+        "preprocess_s": 0.7146400830024504,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 109,
+        "valid_time": "2021-02-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 73.18079884229958
+          }
+        ],
+        "duration_s": 2.0184391099974164,
+        "preprocess_s": 0.7148522520001279,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 110,
+        "valid_time": "2021-02-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 73.18202728923134
+          }
+        ],
+        "duration_s": 2.131550774000061,
+        "preprocess_s": 0.7946856850030599,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 111,
+        "valid_time": "2021-02-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.55995017908346
+          }
+        ],
+        "duration_s": 1.907634749004501,
+        "preprocess_s": 0.7206874789990252,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 112,
+        "valid_time": "2021-02-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.45861949203642
+          }
+        ],
+        "duration_s": 1.8641600650007604,
+        "preprocess_s": 0.7392911339993589,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 113,
+        "valid_time": "2021-02-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.41934374248994
+          }
+        ],
+        "duration_s": 1.8173228449959424,
+        "preprocess_s": 0.9170070910040522,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 114,
+        "valid_time": "2021-02-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.5666454121548
+          }
+        ],
+        "duration_s": 1.8800252829969395,
+        "preprocess_s": 0.964535427003284,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 115,
+        "valid_time": "2021-02-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.06171516714237
+          }
+        ],
+        "duration_s": 1.80929147900315,
+        "preprocess_s": 0.8293168320014956,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 116,
+        "valid_time": "2021-02-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.43570791753163
+          }
+        ],
+        "duration_s": 1.6403692700041574,
+        "preprocess_s": 0.8265652979971492,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 117,
+        "valid_time": "2021-02-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.48096108148796
+          }
+        ],
+        "duration_s": 1.7121768759971019,
+        "preprocess_s": 0.8604102019962738,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 118,
+        "valid_time": "2021-02-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.15068573364982
+          }
+        ],
+        "duration_s": 1.849017857995932,
+        "preprocess_s": 0.8714261029963382,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 119,
+        "valid_time": "2021-02-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 58.428462500599224
+          }
+        ],
+        "duration_s": 1.8201855810038978,
+        "preprocess_s": 0.7874756430028356,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 12,
+        "valid_time": "2020-11-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 59.71219850685704
+          }
+        ],
+        "duration_s": 1.8373737639994943,
+        "preprocess_s": 0.9038834379971377,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 13,
+        "valid_time": "2020-11-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 59.725279141576536
+          }
+        ],
+        "duration_s": 1.7588050240010489,
+        "preprocess_s": 0.9592163029956282,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 14,
+        "valid_time": "2020-11-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 60.00625146970157
+          }
+        ],
+        "duration_s": 1.754803941003047,
+        "preprocess_s": 0.8097733219983638,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 15,
+        "valid_time": "2020-11-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 59.6332614290911
+          }
+        ],
+        "duration_s": 2.043612592999125,
+        "preprocess_s": 0.8510396210040199,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 16,
+        "valid_time": "2020-11-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 58.37872588317508
+          }
+        ],
+        "duration_s": 1.8895380399990245,
+        "preprocess_s": 0.8146269599965308,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 17,
+        "valid_time": "2020-11-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.67108627356424
+          }
+        ],
+        "duration_s": 1.9511628160034888,
+        "preprocess_s": 0.8410332299972652,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 120,
+        "valid_time": "2021-03-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.69910441892435
+          }
+        ],
+        "duration_s": 2.2416021750032087,
+        "preprocess_s": 0.9125553049962036,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 121,
+        "valid_time": "2021-03-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.48767897348074
+          }
+        ],
+        "duration_s": 1.9555767240017303,
+        "preprocess_s": 0.9823308699997142,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 122,
+        "valid_time": "2021-03-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.10018321820186
+          }
+        ],
+        "duration_s": 2.018930559999717,
+        "preprocess_s": 0.8061543709991383,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 123,
+        "valid_time": "2021-03-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.14718051335831
+          }
+        ],
+        "duration_s": 1.9992390750048799,
+        "preprocess_s": 0.9397011410037521,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 124,
+        "valid_time": "2021-03-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.1015712515415
+          }
+        ],
+        "duration_s": 1.9451239890040597,
+        "preprocess_s": 0.8491157710013795,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 125,
+        "valid_time": "2021-03-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.16485839655715
+          }
+        ],
+        "duration_s": 1.817080998000165,
+        "preprocess_s": 0.9825836080053705,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 126,
+        "valid_time": "2021-03-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.46881830290704
+          }
+        ],
+        "duration_s": 1.744676565998816,
+        "preprocess_s": 0.8365340480013401,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 127,
+        "valid_time": "2021-03-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.50031294853554
+          }
+        ],
+        "duration_s": 1.6286510770005407,
+        "preprocess_s": 0.8050798589974875,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 128,
+        "valid_time": "2021-03-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.68293270209345
+          }
+        ],
+        "duration_s": 1.6709187889937311,
+        "preprocess_s": 0.8297824969995418,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 129,
+        "valid_time": "2021-03-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.15268030993073
+          }
+        ],
+        "duration_s": 1.7805531399935717,
+        "preprocess_s": 0.8562439480010653,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 130,
+        "valid_time": "2021-03-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.21735515626413
+          }
+        ],
+        "duration_s": 1.9169288859993685,
+        "preprocess_s": 0.8625472030034871,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 131,
+        "valid_time": "2021-03-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.51237556367063
+          }
+        ],
+        "duration_s": 1.8888713950000238,
+        "preprocess_s": 0.8166732019963092,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 132,
+        "valid_time": "2021-03-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.5410174754382
+          }
+        ],
+        "duration_s": 1.8629910009985906,
+        "preprocess_s": 0.8114183590005268,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 133,
+        "valid_time": "2021-03-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.86820363025937
+          }
+        ],
+        "duration_s": 1.8809582140020211,
+        "preprocess_s": 0.8789947369950823,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 134,
+        "valid_time": "2021-03-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.39717702345456
+          }
+        ],
+        "duration_s": 2.0494000489998143,
+        "preprocess_s": 0.9372072859987384,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 135,
+        "valid_time": "2021-03-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.97840457501066
+          }
+        ],
+        "duration_s": 2.074197706999257,
+        "preprocess_s": 0.833979064002051,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 136,
+        "valid_time": "2021-03-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 73.02004698663592
+          }
+        ],
+        "duration_s": 1.7990181040004245,
+        "preprocess_s": 0.8571013210021192,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 137,
+        "valid_time": "2021-03-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.62496339549135
+          }
+        ],
+        "duration_s": 1.7666243750063586,
+        "preprocess_s": 0.8352927430023556,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 138,
+        "valid_time": "2021-03-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.6115626289616
+          }
+        ],
+        "duration_s": 1.784043900006509,
+        "preprocess_s": 0.9019697309995536,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 139,
+        "valid_time": "2021-03-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.31997799713288
+          }
+        ],
+        "duration_s": 1.826550508994842,
+        "preprocess_s": 0.9441358330004732,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 140,
+        "valid_time": "2021-03-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.27177042768608
+          }
+        ],
+        "duration_s": 1.8118982319938368,
+        "preprocess_s": 0.7950414160004584,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 141,
+        "valid_time": "2021-03-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 73.12732331396761
+          }
+        ],
+        "duration_s": 1.6281038490051287,
+        "preprocess_s": 0.7477223649984808,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 142,
+        "valid_time": "2021-03-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 73.04902355325761
+          }
+        ],
+        "duration_s": 1.6652262530042208,
+        "preprocess_s": 0.7673195129973465,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 143,
+        "valid_time": "2021-03-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.69403236413267
+          }
+        ],
+        "duration_s": 2.111930596001912,
+        "preprocess_s": 0.8391415160003817,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 144,
+        "valid_time": "2021-03-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.72127395922796
+          }
+        ],
+        "duration_s": 1.9011894569994183,
+        "preprocess_s": 0.8241142859988031,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 145,
+        "valid_time": "2021-03-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.34267208683961
+          }
+        ],
+        "duration_s": 1.9056586630031234,
+        "preprocess_s": 0.8365388090023771,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 146,
+        "valid_time": "2021-03-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.29303507300237
+          }
+        ],
+        "duration_s": 2.0619582759973127,
+        "preprocess_s": 0.967598358001851,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 147,
+        "valid_time": "2021-03-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.26361248877481
+          }
+        ],
+        "duration_s": 2.008635342994239,
+        "preprocess_s": 0.8422091250031372,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 148,
+        "valid_time": "2021-03-29T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.51131015439843
+          }
+        ],
+        "duration_s": 1.874420485997689,
+        "preprocess_s": 0.8885726790031185,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 149,
+        "valid_time": "2021-03-30T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.23180702208118
+          }
+        ],
+        "duration_s": 1.8158377389991074,
+        "preprocess_s": 0.818020514001546,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 150,
+        "valid_time": "2021-03-31T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.2880667574108
+          }
+        ],
+        "duration_s": 1.8686083339998731,
+        "preprocess_s": 0.8438949779956602,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 151,
+        "valid_time": "2021-04-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 72.01392883831495
+          }
+        ],
+        "duration_s": 2.0061320629974944,
+        "preprocess_s": 0.7853557179987547,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 152,
+        "valid_time": "2021-04-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.24909460785209
+          }
+        ],
+        "duration_s": 1.8771247749973554,
+        "preprocess_s": 0.8397689839985105,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 153,
+        "valid_time": "2021-04-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.27307355955797
+          }
+        ],
+        "duration_s": 2.0022830960006104,
+        "preprocess_s": 0.8805572659985046,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 154,
+        "valid_time": "2021-04-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.53319619512209
+          }
+        ],
+        "duration_s": 1.8996842440028558,
+        "preprocess_s": 0.8878871330016409,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 155,
+        "valid_time": "2021-04-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.46735810581875
+          }
+        ],
+        "duration_s": 1.7532186759999604,
+        "preprocess_s": 0.7973765600036131,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 156,
+        "valid_time": "2021-04-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.2115255631252
+          }
+        ],
+        "duration_s": 2.011463761002233,
+        "preprocess_s": 0.8117509840012644,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 157,
+        "valid_time": "2021-04-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 71.72210408429709
+          }
+        ],
+        "duration_s": 1.8530987220001407,
+        "preprocess_s": 0.9643514630006393,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 158,
+        "valid_time": "2021-04-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.99663008976167
+          }
+        ],
+        "duration_s": 1.6440116619996843,
+        "preprocess_s": 0.8453626880000229,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 159,
+        "valid_time": "2021-04-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.73617154039361
+          }
+        ],
+        "duration_s": 1.8335275879944675,
+        "preprocess_s": 0.9216428719955729,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 160,
+        "valid_time": "2021-04-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.64527260621861
+          }
+        ],
+        "duration_s": 1.8017535659964778,
+        "preprocess_s": 0.7947912079980597,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 161,
+        "valid_time": "2021-04-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.89212714435713
+          }
+        ],
+        "duration_s": 2.1217919799964875,
+        "preprocess_s": 0.8802835590031464,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 162,
+        "valid_time": "2021-04-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.4960827520433
+          }
+        ],
+        "duration_s": 1.8600604129969724,
+        "preprocess_s": 0.837455096996564,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 163,
+        "valid_time": "2021-04-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.22023357528558
+          }
+        ],
+        "duration_s": 1.9683998670006986,
+        "preprocess_s": 0.8438309250050224,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 164,
+        "valid_time": "2021-04-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.01396666669659
+          }
+        ],
+        "duration_s": 1.8488407379991258,
+        "preprocess_s": 0.8063531389998388,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 165,
+        "valid_time": "2021-04-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.08731157948263
+          }
+        ],
+        "duration_s": 1.9024564840001403,
+        "preprocess_s": 0.9066244139976334,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 166,
+        "valid_time": "2021-04-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.53587052108907
+          }
+        ],
+        "duration_s": 2.0653041879995726,
+        "preprocess_s": 0.9059289090000675,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 167,
+        "valid_time": "2021-04-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.48406864337876
+          }
+        ],
+        "duration_s": 2.112819784997555,
+        "preprocess_s": 0.8031450229973416,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 168,
+        "valid_time": "2021-04-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.51467492243394
+          }
+        ],
+        "duration_s": 2.0512244800047483,
+        "preprocess_s": 0.8666899210002157,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 169,
+        "valid_time": "2021-04-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.45155841856392
+          }
+        ],
+        "duration_s": 2.103336505999323,
+        "preprocess_s": 0.8279413330019452,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 170,
+        "valid_time": "2021-04-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.01153690884746
+          }
+        ],
+        "duration_s": 1.9639591719969758,
+        "preprocess_s": 0.9123473510044278,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 171,
+        "valid_time": "2021-04-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.55454210644098
+          }
+        ],
+        "duration_s": 2.100119116999849,
+        "preprocess_s": 0.8325412509948364,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 172,
+        "valid_time": "2021-04-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.30288196957787
+          }
+        ],
+        "duration_s": 1.9707129779999377,
+        "preprocess_s": 0.8065683110035025,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 173,
+        "valid_time": "2021-04-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.07848867566017
+          }
+        ],
+        "duration_s": 1.8245258099996136,
+        "preprocess_s": 0.8369109790000948,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 174,
+        "valid_time": "2021-04-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.0250730419514
+          }
+        ],
+        "duration_s": 2.0177041069982806,
+        "preprocess_s": 0.8834368879979593,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 175,
+        "valid_time": "2021-04-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.5216406060574
+          }
+        ],
+        "duration_s": 1.784164900003816,
+        "preprocess_s": 0.8406314960011514,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 176,
+        "valid_time": "2021-04-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.4377394935365
+          }
+        ],
+        "duration_s": 1.6370158170029754,
+        "preprocess_s": 0.7769166910002241,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 177,
+        "valid_time": "2021-04-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.9353531366208
+          }
+        ],
+        "duration_s": 1.8523979460005648,
+        "preprocess_s": 0.8338664460025029,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 178,
+        "valid_time": "2021-04-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.77857352897554
+          }
+        ],
+        "duration_s": 1.7785195749966078,
+        "preprocess_s": 0.860926705005113,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 179,
+        "valid_time": "2021-04-29T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 59.05684533951843
+          }
+        ],
+        "duration_s": 2.0577666950048297,
+        "preprocess_s": 0.8225658360024681,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 18,
+        "valid_time": "2020-11-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 60.412659459946816
+          }
+        ],
+        "duration_s": 1.900299631000962,
+        "preprocess_s": 0.8429347240016796,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 19,
+        "valid_time": "2020-11-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 60.918518093554994
+          }
+        ],
+        "duration_s": 1.952393726001901,
+        "preprocess_s": 0.7768657459964743,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 20,
+        "valid_time": "2020-11-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 61.826507410973264
+          }
+        ],
+        "duration_s": 1.9160823619968141,
+        "preprocess_s": 0.8102907940046862,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 21,
+        "valid_time": "2020-11-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 62.407017963247846
+          }
+        ],
+        "duration_s": 2.0995227379971766,
+        "preprocess_s": 0.8160610429986264,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 22,
+        "valid_time": "2020-11-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 62.34836733000248
+          }
+        ],
+        "duration_s": 1.872934446000727,
+        "preprocess_s": 0.8832447359964135,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 23,
+        "valid_time": "2020-11-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.34267686698139
+          }
+        ],
+        "duration_s": 0.9638094469992211,
+        "preprocess_s": 0.5091631930044969,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 180,
+        "valid_time": "2021-04-30T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 61.8902740922877
+          }
+        ],
+        "duration_s": 1.812802793996525,
+        "preprocess_s": 0.9619739049958298,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 24,
+        "valid_time": "2020-11-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 62.279771185782245
+          }
+        ],
+        "duration_s": 1.7509297310025431,
+        "preprocess_s": 0.8138871940027457,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 25,
+        "valid_time": "2020-11-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 61.928324376273736
+          }
+        ],
+        "duration_s": 1.8594990500059794,
+        "preprocess_s": 0.8623079039971344,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 26,
+        "valid_time": "2020-11-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 62.83463086443415
+          }
+        ],
+        "duration_s": 1.8531911009995383,
+        "preprocess_s": 0.9347165779981879,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 27,
+        "valid_time": "2020-11-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 63.834187509159484
+          }
+        ],
+        "duration_s": 1.6987979109981097,
+        "preprocess_s": 0.8345300310029415,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 28,
+        "valid_time": "2020-11-29T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 64.14071925064015
+          }
+        ],
+        "duration_s": 1.84453490699525,
+        "preprocess_s": 0.8351981580053689,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 29,
+        "valid_time": "2020-11-30T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 64.31395205798759
+          }
+        ],
+        "duration_s": 1.927631159000157,
+        "preprocess_s": 0.8108534429993597,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 30,
+        "valid_time": "2020-12-01T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 64.00607411564793
+          }
+        ],
+        "duration_s": 2.000625685999694,
+        "preprocess_s": 0.8179665249990649,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 31,
+        "valid_time": "2020-12-02T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 63.08975953297362
+          }
+        ],
+        "duration_s": 1.946445647001383,
+        "preprocess_s": 0.9225288909947267,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 32,
+        "valid_time": "2020-12-03T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 63.43926329286146
+          }
+        ],
+        "duration_s": 2.016470983006002,
+        "preprocess_s": 0.8687220479987445,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 33,
+        "valid_time": "2020-12-04T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 64.4836459120765
+          }
+        ],
+        "duration_s": 1.9279772359950584,
+        "preprocess_s": 0.7982841839984758,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 34,
+        "valid_time": "2020-12-05T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 65.12144443385687
+          }
+        ],
+        "duration_s": 1.8954358870032593,
+        "preprocess_s": 0.8085241240041796,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 35,
+        "valid_time": "2020-12-06T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 65.46547811499954
+          }
+        ],
+        "duration_s": 1.7933344459961518,
+        "preprocess_s": 0.9374724310036981,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 36,
+        "valid_time": "2020-12-07T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 66.8213587293088
+          }
+        ],
+        "duration_s": 1.676452188003168,
+        "preprocess_s": 0.8240893440015498,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 37,
+        "valid_time": "2020-12-08T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 65.32824030369824
+          }
+        ],
+        "duration_s": 2.1049398250033846,
+        "preprocess_s": 0.9382222429994727,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 38,
+        "valid_time": "2020-12-09T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 65.6359727841808
+          }
+        ],
+        "duration_s": 1.7626002169999992,
+        "preprocess_s": 0.7609729930045432,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 39,
+        "valid_time": "2020-12-10T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 66.17217586734692
+          }
+        ],
+        "duration_s": 1.696389635995729,
+        "preprocess_s": 0.7800072819954948,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 40,
+        "valid_time": "2020-12-11T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 66.60631983265924
+          }
+        ],
+        "duration_s": 1.653080576004868,
+        "preprocess_s": 0.7616272660015966,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 41,
+        "valid_time": "2020-12-12T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 66.29742151483384
+          }
+        ],
+        "duration_s": 1.930655973003013,
+        "preprocess_s": 0.8305098790006014,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 42,
+        "valid_time": "2020-12-13T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 66.8118795323678
+          }
+        ],
+        "duration_s": 1.9162755639990792,
+        "preprocess_s": 0.8091973739938112,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 43,
+        "valid_time": "2020-12-14T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.04800619162793
+          }
+        ],
+        "duration_s": 1.9585145599994576,
+        "preprocess_s": 1.018903260002844,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 44,
+        "valid_time": "2020-12-15T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 67.51608059322031
+          }
+        ],
+        "duration_s": 1.8540016150000156,
+        "preprocess_s": 0.909783007002261,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 45,
+        "valid_time": "2020-12-16T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.02914631464735
+          }
+        ],
+        "duration_s": 1.9903128720034147,
+        "preprocess_s": 0.8491703569961828,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 46,
+        "valid_time": "2020-12-17T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 68.79022127258207
+          }
+        ],
+        "duration_s": 2.200889959996857,
+        "preprocess_s": 0.8784578780032462,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 47,
+        "valid_time": "2020-12-18T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.09677706016032
+          }
+        ],
+        "duration_s": 2.010506422004255,
+        "preprocess_s": 0.8933561489975546,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 48,
+        "valid_time": "2020-12-19T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.3848641891704
+          }
+        ],
+        "duration_s": 1.7061579000001075,
+        "preprocess_s": 0.9299233800047659,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 49,
+        "valid_time": "2020-12-20T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.64273760599531
+          }
+        ],
+        "duration_s": 1.8574912900003255,
+        "preprocess_s": 0.8156732959978399,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 50,
+        "valid_time": "2020-12-21T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.56190526331093
+          }
+        ],
+        "duration_s": 1.893109053002263,
+        "preprocess_s": 0.9122986610018415,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 51,
+        "valid_time": "2020-12-22T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.5411186529662
+          }
+        ],
+        "duration_s": 1.6094294959984836,
+        "preprocess_s": 0.7701090979971923,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 52,
+        "valid_time": "2020-12-23T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.68117812241134
+          }
+        ],
+        "duration_s": 1.8182253999984823,
+        "preprocess_s": 0.83889398399333,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 53,
+        "valid_time": "2020-12-24T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.38500924764071
+          }
+        ],
+        "duration_s": 2.0409984230063856,
+        "preprocess_s": 0.8840423590008868,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 54,
+        "valid_time": "2020-12-25T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.23382952854988
+          }
+        ],
+        "duration_s": 1.8129073060044902,
+        "preprocess_s": 0.7879105440006242,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 55,
+        "valid_time": "2020-12-26T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 70.09336210381203
+          }
+        ],
+        "duration_s": 1.8620113799988758,
+        "preprocess_s": 0.9079680389986606,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 56,
+        "valid_time": "2020-12-27T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.28908444728907
+          }
+        ],
+        "duration_s": 1.9122008460035431,
+        "preprocess_s": 0.8204296509939013,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 57,
+        "valid_time": "2020-12-28T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.41868930094266
+          }
+        ],
+        "duration_s": 1.9088430350020644,
+        "preprocess_s": 0.8193063380022068,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 58,
+        "valid_time": "2020-12-29T00:00:00",
+        "ref_is_observation": false
+      },
+      {
+        "ref_alias": "amsr2",
+        "result": [
+          {
+            "Metric": "rmsd",
+            "Variable": "Siconc",
+            "Value": 69.70402751140242
+          }
+        ],
+        "duration_s": 2.0734813349990873,
+        "preprocess_s": 0.8825703929978772,
+        "n_points": 8716288,
+        "forecast_reference_time": "2020-11-01T00:00:00",
+        "lead_time": 59,
+        "valid_time": "2020-12-30T00:00:00",
+        "ref_is_observation": false
+      }
+    ]
+  },
+  "metadata": {
+    "evaluation_date": "2026-05-14T10:42:11.693456",
+    "total_entries": 181,
+    "n_errors": 0,
+    "config": {
+      "start_time": "2020-11-01",
+      "end_time": "2021-05-01",
+      "n_days_forecast": 181,
+      "n_days_interval": 365
+    }
+  }
+}

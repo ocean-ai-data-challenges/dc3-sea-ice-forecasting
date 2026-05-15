@@ -20,7 +20,8 @@ dependencies = [
     "dask[distributed]>=2025.01.0",
     "numpy (>=1.25,<2.0.0)",
     "mypy_boto3_s3",
-    "numcodecs (>=0.13.1,<0.16.0)"
+    "numcodecs (>=0.13.1,<0.16.0)",
+    "pyinterp==2025.11.0"
 ]
 
 [project.urls]
@@ -44,7 +45,8 @@ mypy = "*"
 
 [tool.poetry.group.custom.dependencies]
 oceanbench = { git = "https://github.com/aitmohandk/oceanbench.git", branch = "main" }
-xrpatcher = { git = "https://github.com/jejjohnson/xrpatcher.git", branch = "main" }
+dcleaderboard = { git = "https://github.com/ocean-ai-data-challenges/dc_leaderboard.git", branch = "main"}
+xrpatcher = { git = "https://github.com/jejjohnson/xrpatcher.git", branch = "main", python = ">=3.12,<3.14.0" }
 xesmf = { git = "https://github.com/pangeo-data/xESMF.git", branch = "master" }
 dctools = {git = "https://github.com/ocean-ai-data-challenges/dc-tools.git", branch = "main"}
 
@@ -54,6 +56,8 @@ optional = true
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.2.1"
 sphinx-rtd-theme = "^3.0.2"
+myst-nb = "^1.0.0"
+sphinx-design = "^0.6.0"
 myst-parser = "^4.0.1"
 pygments = "^2.19.1"
 

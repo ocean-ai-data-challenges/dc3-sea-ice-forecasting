@@ -3,61 +3,190 @@
 
 """Evaluation of a model against a given reference."""
 
-import os
+# ── Cap BLAS/OpenBLAS/MKL thread pools BEFORE any library is imported ─────
+# OpenBLAS reads OPENBLAS_NUM_THREADS only at library-load time.  Setting it
+# after ``import numpy`` has NO effect (the thread pool is already sized).
+import os as _os
+for _var in (
+    "OPENBLAS_NUM_THREADS",
+    "MKL_NUM_THREADS",
+    "OMP_NUM_THREADS",
+    "VECLIB_MAXIMUM_THREADS",
+    "NUMEXPR_NUM_THREADS",
+    "GOTO_NUM_THREADS",
+    "BLOSC_NTHREADS",
+):
+    _os.environ.setdefault(_var, "1")
+del _var
+
+import warnings as _warnings
+_warnings.filterwarnings(
+    "ignore",
+    message="Engine 'argo' loading failed",
+    category=RuntimeWarning,
+)
+del _warnings
+
 import sys
+import subprocess
+import logging
+import logging.config as _logging_config
+from pathlib import Path
 
-from dctools.utilities.args_config import load_args_and_config
-
-from dc3.evaluation.evaluation import DC3Evaluation
+from loguru import logger as _loguru_logger
 
 
-def main() -> int:
-    """Main function.
+# ── Suppress noisy Dask / Tornado log chatter ─────────────────────────────
 
-    Args:
-        args (Namespace, optional): Namespace of parsed arguments.
+_DASK_NOISE_LOGGERS = (
+    "distributed",
+    "distributed.comm",
+    "distributed.core",
+    "distributed.nanny",
+    "distributed.scheduler",
+    "distributed.worker",
+    "tornado.application",
+)
 
-    Returns:
-        int: return code.
-    """
+_SUPPRESSED_STDLOG_FRAGMENTS = (
+    "Connection to tcp://",
+    "has been closed",
+    "Scheduler was unaware of this worker",
+)
+
+_SUPPRESSED_LOGURU_PREFIXES = (
+    "Reconfiguring Dask cluster for ",
+)
+
+
+class _DaskNoiseFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        if record.levelno >= logging.ERROR:
+            return True
+        message = record.getMessage()
+        return not any(fragment in message for fragment in _SUPPRESSED_STDLOG_FRAGMENTS)
+
+
+def _install_dask_noise_filter() -> None:
+    noise_filter = _DaskNoiseFilter()
+    for logger_name in _DASK_NOISE_LOGGERS:
+        logger = logging.getLogger(logger_name)
+        logger.setLevel(logging.WARNING)
+        if not any(isinstance(existing, _DaskNoiseFilter) for existing in logger.filters):
+            logger.addFilter(noise_filter)
+
+
+def _loguru_noise_filter(record: dict) -> bool:
+    message = record.get("message", "")
+    return not any(message.startswith(prefix) for prefix in _SUPPRESSED_LOGURU_PREFIXES)
+
+
+_original_dict_config = _logging_config.dictConfig
+
+
+def _noise_aware_dict_config(config: dict) -> None:
+    _original_dict_config(config)
     try:
-        config_name = "dc3"
-        config_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)),
-            'config',
-            f"{config_name}.yaml",
+        _install_dask_noise_filter()
+    except Exception:
+        pass
+
+
+_original_loguru_add = _loguru_logger.add
+
+
+def _noise_aware_loguru_add(*args, **kwargs):
+    kwargs.setdefault("filter", _loguru_noise_filter)
+    return _original_loguru_add(*args, **kwargs)
+
+
+_logging_config.dictConfig = _noise_aware_dict_config
+_loguru_logger.add = _noise_aware_loguru_add
+_install_dask_noise_filter()
+
+# ── Imports ───────────────────────────────────────────────────────────────
+
+# Ensure the repository root is importable when running as a script.
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from dc3.evaluation.dc3 import DC3Evaluation  # noqa: E402
+from dctools.processing.runner import run_from_config  # noqa: E402
+from dctools.utilities.args_config import parse_arguments  # noqa: E402
+
+# Belt-and-suspenders: cap ALL OpenBLAS variants in the main process at runtime
+# (env vars are set above, but some OpenBLAS builds ignore them after init).
+from dctools.metrics.evaluator import _cap_openblas_via_proc_maps  # noqa: E402
+_cap_openblas_via_proc_maps(1)
+
+# Directory that holds the DC3-specific YAML configs shipped in this repo.
+DC3_CONFIG_DIR = PROJECT_ROOT / "dc3" / "config"
+
+# Default config file name (without .yaml).
+DEFAULT_CONFIG_NAME = "dc3"
+
+# Absolute path to the leaderboard display config shipped with this repo.
+_LEADERBOARD_CONFIG_YAML = DC3_CONFIG_DIR / "leaderboard_config.yaml"
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────
+
+def _has_arg(argv: list[str], short: str, long: str) -> bool:
+    """Check whether *short* or *long* flag already appears in *argv*."""
+    return any(a == short or a == long or a.startswith(f"{long}=") for a in argv)
+
+
+def _inject_default_paths(argv: list[str]) -> None:
+    """Inject default output/log paths when not provided on the CLI."""
+    default_output_dir = PROJECT_ROOT / "dc3_output"
+    default_log_dir = default_output_dir / "logs"
+    default_logfile = default_log_dir / "dc3.log"
+
+    if not _has_arg(argv, "-d", "--data_directory"):
+        argv.extend(["--data_directory", str(default_output_dir)])
+
+    if not _has_arg(argv, "-l", "--logfile"):
+        default_log_dir.mkdir(parents=True, exist_ok=True)
+        argv.extend(["--logfile", str(default_logfile)])
+
+
+def _resolve_dc3_config(cli_args) -> Path:
+    """Resolve the DC3 YAML config path from CLI args or default."""
+    config_name = getattr(cli_args, "config_name", None) or DEFAULT_CONFIG_NAME
+    return DC3_CONFIG_DIR / f"{config_name}.yaml"
+
+
+def _pack_leaderboard_map_data() -> None:
+    """Create docs leaderboard archive if map_data was generated by the run."""
+    map_data_dir = PROJECT_ROOT / "docs" / "source" / "_extra" / "leaderboard" / "map_data"
+    pack_script = PROJECT_ROOT / "docs" / "scripts" / "pack_map_data.py"
+
+    if not map_data_dir.is_dir():
+        print(
+            "[evaluate] map_data directory not found; skipped leaderboard archive generation "
+            f"({map_data_dir})."
         )
-        args = load_args_and_config(config_path)
-        if args is None:
-            print("Config loading failed.")
-            return 1
+        return
 
-        vars(args)['regridder_weights'] = os.path.join(args.data_directory, 'weights')
-        vars(args)['catalog_dir'] = os.path.join(args.data_directory, "catalogs")
-        vars(args)['result_dir'] = os.path.join(args.data_directory, "results")
+    print("[evaluate] Packing leaderboard map data archive ...")
+    result = subprocess.run([sys.executable, str(pack_script)], check=False)
+    if result.returncode != 0:
+        print(
+            "[evaluate] WARNING: map_data archive generation failed. "
+            f"Please run manually: {sys.executable} {pack_script}"
+        )
 
-        if os.path.exists(args.regridder_weights):
-            os.remove(args.regridder_weights)
-
-        os.makedirs(args.catalog_dir, exist_ok=True)
-
-        evaluator_instance = DC3Evaluation(args)
-        evaluator_instance.run_eval()
-        print("Evaluation has finished successfully.")
-        return 0
-
-    except KeyboardInterrupt:
-        print("Manual abort.")
-        # Error = non-zero return code
-        return 1
-    except SystemExit:
-        # SystemExit is raised when the user calls sys.exit()
-        # or when an error occurs in the argument parsing
-        # (e.g. --help)
-        # raise Exception("SystemExit.")
-        print("SystemExit.")
-        # Error = non-zero return code
-        return 1
 
 if __name__ == "__main__":
-    sys.exit(main())
+    _inject_default_paths(sys.argv)
+    cli_args = parse_arguments()
+    # Inject the leaderboard config path so DC3Evaluation can find it without
+    # relying on a path baked into dc3.py.
+    if not getattr(cli_args, "leaderboard_config", None):
+        vars(cli_args)["leaderboard_config"] = str(_LEADERBOARD_CONFIG_YAML)
+    config_path = _resolve_dc3_config(cli_args)
+    exit_code = run_from_config(config_path, evaluation_cls=DC3Evaluation, cli_args=cli_args)
+    if exit_code == 0:
+        _pack_leaderboard_map_data()
+    sys.exit(exit_code)

@@ -1,0 +1,62 @@
+# =============================================================================
+# DC3 Leaderboard — Configuration file
+# =============================================================================
+# Controls display names, page text, and layout of the DC3 leaderboard site.
+# All sections are optional; unspecified keys fall back to built-in defaults.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# A. Page-level text
+# -----------------------------------------------------------------------------
+texts:
+  page_title: "Data Challenge 3 — Sea Ice Forecasting Leaderboard"
+  brand_name: "Ocean & Climate"
+  brand_sub: "Data Challenge"
+  github_url: "https://github.com/ocean-ai-data-challenges/dc3-sea-ice-forecasting"
+
+  # Section-header templates (available placeholders shown between {}).
+  reference_header: "## Reference Dataset: {ref_alias}"
+  metric_header: "### Metric: {metric_name}"
+  variable_group_header: "#### Variable Type: {var_type}"
+
+# -----------------------------------------------------------------------------
+# B. Metric display names
+# Map internal metric key → human-readable label shown in leaderboard tables.
+# -----------------------------------------------------------------------------
+metrics_names:
+  rmsd: "Root Mean Squared Deviation (RMSD)"
+  rmse: "Root Mean Squared Error (RMSE)"
+  mae:  "Mean Absolute Error (MAE)"
+  me:   "Mean Error (ME)"
+  mse:  "Mean Squared Error (MSE)"
+  bias: "Bias"
+  lagrangian: "Lagrangian Analysis"
+
+# -----------------------------------------------------------------------------
+# C. Variable display names
+# Map internal variable name → human-readable label shown in column headers.
+# -----------------------------------------------------------------------------
+variables_names:
+  sic:              "Sea Ice Concentration (SIC)"
+  sit:              "Sea Ice Thickness (SIT)"
+  siconc:           "Sea Ice Concentration (SIC)"
+  sithick:          "Sea Ice Thickness (SIT)"
+  u_ice:            "Ice Drift — Eastward (U)"
+  v_ice:            "Ice Drift — Northward (V)"
+  ice_drift_u:      "Ice Drift — Eastward (U)"
+  ice_drift_v:      "Ice Drift — Northward (V)"
+  sea_ice_conc:     "Sea Ice Concentration"
+  sea_ice_thick:    "Sea Ice Thickness"
+
+# -----------------------------------------------------------------------------
+# D. Model / dataset display names
+# Map internal dataset identifier → human-readable name shown in row labels.
+# -----------------------------------------------------------------------------
+models_names:
+  topaz:              "TOPAZ4 (Arctic Ocean Model)"
+  topaz4:             "TOPAZ4 (Arctic Ocean Model)"
+  amsr2:              "AMSR2 (Satellite — Sea Ice Concentration)"
+  iabp:               "IABP (Ice Drift Buoys)"
+  modis:              "MODIS (Ice Extent)"
+  challenger_model_1: "Challenger Model 1"
+  challenger_model_2: "Challenger Model 2"

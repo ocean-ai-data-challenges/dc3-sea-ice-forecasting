@@ -15,11 +15,20 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'myst_parser',
+    'myst_nb',
+    'sphinx_design',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
 ]
+
+myst_enable_extensions = [
+    'colon_fence',
+]
+
+# myst-nb: do not execute notebooks at build time (they need the full
+# scientific stack which is not available on ReadTheDocs).
+nb_execution_mode = 'off'
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -42,4 +51,7 @@ myst_links_external_new_tab = True
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+# Copy the standalone leaderboard HTML/CSS/JS to the build output so that
+# the real leaderboard is served alongside the Sphinx documentation.
+html_extra_path = ['_extra']
 # html_logo = "_static/wb2-logo-wide.png" # TODO: draw a logo for the DCs
