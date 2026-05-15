@@ -23,9 +23,9 @@ sphinx:
 # to build your documentation
 # See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
 
-# python:
-#   install:
-#     - requirements: docs/requirements.txt
+python:
+  install:
+    - requirements: docs/requirements.txt
 
 # TODO: Check out how to build automatic API docs with sphinx.ext.autosummary
 # and sphinx.ext.autodoc
